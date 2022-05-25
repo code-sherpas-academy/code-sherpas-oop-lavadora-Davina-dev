@@ -10,10 +10,12 @@ object MiLavadora {
     var capacidad: Int = 7
     var isFull: Boolean = false
     var isActive: Boolean = false
+    var detergente: Boolean = false
+    var suavizante: Boolean = false
 
     fun introducirRopa(){
         if(this.capacidad <= 0 ){
-            println("Tambor lleno, alcanzó la capacidad máxima") 
+            println("Tambor lleno,  isFull: ${this.isFull}") 
         }else{
             MiLavadora.capacidad = this.capacidad -1
             println("introduciendo ropa : ${MiLavadora.capacidad}")
@@ -28,27 +30,27 @@ object MiLavadora {
             println("sacando ropa: ${MiLavadora.capacidad}")
         }
     }
+
+
  }
 
  object EnchufeTomaCorriente {
     var encendida: Boolean = false
-    fun encender(){
-        EnchufeTomaCorriente.encendida = true
+    fun on(){
+       MiLavadora.isActive = true
     }
-    fun apagar(){
-        EnchufeTomaCorriente.encendida = false
+    fun off(){
+        MiLavadora.isActive = false
     }
  }
     
 
 object CajonDetergenteSuavizante{
-    var detergente: Boolean = false
-    var suavizante: Boolean = false
     fun agregarSuavizante(){
-        CajonDetergenteSuavizante.suavizante = true
+        MiLavadora.suavizante = true
     }
     fun agregarDetergente(){
-        CajonDetergenteSuavizante.detergente = true
+        MiLavadora.detergente = true
     }
 }
 
@@ -76,13 +78,10 @@ fun main(){
     MiLavadora.sacarRopa()
    
     
-    EnchufeTomaCorriente.encender()
-    println("¿está encendido? : ${EnchufeTomaCorriente.encendida}")
-    EnchufeTomaCorriente.apagar()
-    println("¿está encendido? : ${EnchufeTomaCorriente.encendida}")
+    
     
     CajonDetergenteSuavizante.agregarDetergente()
     CajonDetergenteSuavizante.agregarSuavizante()
-    println("¿puse detergente?: ${CajonDetergenteSuavizante.detergente}")
-    println("¿puse suavizante?: ${CajonDetergenteSuavizante.suavizante}")
+    println("¿puse detergente?: ${MiLavadora.detergente}")
+    println("¿puse suavizante?: ${MiLavadora.suavizante}")
 }
