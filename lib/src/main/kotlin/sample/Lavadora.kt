@@ -1,7 +1,10 @@
 object MiLavadora {
     var marca: String = "Miele"
+    private set
     var modelo: String = "WCA020 WCS Active"
+    private set
     var capacidad: Int = 7
+    private set
     var isFull: Boolean = false
     var isActive: Boolean = false
     var detergente: Boolean = false
