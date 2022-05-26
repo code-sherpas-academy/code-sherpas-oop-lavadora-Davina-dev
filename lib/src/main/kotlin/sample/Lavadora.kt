@@ -10,6 +10,7 @@ object MiLavadora {
     var detergente: Boolean = false
     var suavizante: Boolean = false
     var isOn: Boolean = false
+    private var programa = ProgramaLavadora //mantiene referencia en memoria
 
     fun introducirRopa() {
         if (this.capacidad <= 0) {
@@ -31,7 +32,6 @@ object MiLavadora {
 }
 
 object EnchufeTomaCorriente {
-    var encendida: Boolean = false
     fun on() {
         MiLavadora.isOn = true
     }
@@ -50,12 +50,11 @@ object CajonDetergenteSuavizante {
 }
 
 object ProgramaLavadora {
-    //     var progRapido : Boolean = false
-    //     var progNormal : Boolean = false
-    //     var progLento : Boolean = false
-    //     val list = listOf("rapido", "normal", "lento")?
-    //     fun GetPrograma(x){
-
+    var programa = arrayOf <String> ("progRapido", "progNormal", "progLento")
+    var progRapido : Boolean = false
+    var progNormal : Boolean = false
+    var progLento : Boolean = false
+  
     fun iniciarPrograma() {
         MiLavadora.isActive = true
     }
@@ -66,6 +65,8 @@ object ProgramaLavadora {
 }
 
 fun main() {
+    EnchufeTomaCorriente.on()
+    println("¿está encendida?: ${MiLavadora.isOn}")
     MiLavadora.introducirRopa()
     MiLavadora.sacarRopa()
     CajonDetergenteSuavizante.agregarDetergente()
