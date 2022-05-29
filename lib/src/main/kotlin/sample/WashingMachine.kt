@@ -2,22 +2,18 @@
 
 
 
-class WashingMachine {
+class WashingMachine constructor(marca: String, model: String, capacity: Int){
 
-    var marca: String
-    var model: String
-    var capacity: Int
+    var marca: String = marca
+    var model: String = model
+    var capacity: Int = capacity
     var isFull: Boolean = false
     var isActive: Boolean = false
     var detergent: Boolean = false
     var softener: Boolean = false
     var isOn: Boolean = false
 
-    constructor(marca: String, model: String, capacity: Int) {
-        this.marca = marca
-        this.model = model
-        this.capacity = capacity
-    }
+
 
     fun on() {
         this.isOn = true
