@@ -62,24 +62,24 @@ class WashingMachine constructor(marca: String, model: String, capacity: Int){
 
 
 fun main() {
-    val MyWashingMachine = WashingMachine("Miele", "WCA020 WCS Active", 7)
+    val myWashingMachine: WashingMachine = WashingMachine("Miele", "WCA020 WCS Active", 7)
     
-    //MyWashingMachine.on()
-    //println(MyWashingMachine.isOn)
-    //MyWashingMachine.off()
-    //println(MyWashingMachine.isOn)
+    //myWashingMachine.on()
+    //println(myWashingMachine.isOn)
+    //myWashingMachine.off()
+    //println(myWashingMachine.isOn)
 
-    // MyWashingMachine.selectProgram("rápido")
-    // println(MyWashingMachine.isActive)
-    // MyWashingMachine.stopProgram()
-    // println(MyWashingMachine.isActive)
+    // myWashingMachine.selectProgram("lento")
+    // println(myWashingMachine.isActive)
+    // myWashingMachine.stopProgram()
+    // println(myWashingMachine.isActive)
 
-    // println(MyWashingMachine.softener)
-    // println(MyWashingMachine.detergent)
-    // MyWashingMachine.addSoftener()
-    // println(MyWashingMachine.softener)
-    // MyWashingMachine.addDetergent()
-    // println(MyWashingMachine.detergent)
+    // println(myWashingMachine.softener)
+    // println(myWashingMachine.detergent)
+    // myWashingMachine.addSoftener()
+    // println(myWashingMachine.softener)
+    // myWashingMachine.addDetergent()
+    // println(myWashingMachine.detergent)
 
 
     // println(MyWashingMachine.capacity)
